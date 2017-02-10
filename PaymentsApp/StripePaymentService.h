@@ -1,5 +1,5 @@
 //
-//  PaymentGateway.h
+//  StripePaymentService.h
 //  PaymentsApp
 //
 //  Created by Callum Davies on 2017-02-10.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "PaymentDelegate.h"
 
-@interface PaymentGateway : NSObject
+@interface StripePaymentService : NSObject <PaymentDelegate>
 
 -(void)processPaymentAmount:(NSInteger)userInt;
 
