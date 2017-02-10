@@ -15,4 +15,19 @@
     NSLog(@"Stripe processed $%li",(long)userInt);
 }
 
+-(BOOL)canProcessPayment
+{
+    int n = arc4random_uniform(2);
+    if (n == 0) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
+-(NSString *)name
+{
+    return @"Stripe";
+}
+
 @end

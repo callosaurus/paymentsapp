@@ -55,15 +55,6 @@ int main(int argc, const char * argv[]) {
                 break;
             }
         }
-        
-        
-        [payGate processPaymentAmount:randomDollarValue];
-        
-        
-        
-        
-        
-        
     }
     return 0;
 }

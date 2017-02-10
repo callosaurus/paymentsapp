@@ -11,5 +11,7 @@
 @protocol PaymentDelegate <NSObject>
 
 -(void)processPaymentAmount:(NSInteger)userInt;
+-(BOOL)canProcessPayment;
+-(NSString *)name;
 
 @end

@@ -12,7 +12,14 @@
 
 -(void)processPaymentAmount:(NSInteger)userInt
 {
-    [self.paymentDelegate processPaymentAmount:userInt];
+    BOOL processAllowed = [self.paymentDelegate canProcessPayment];
+    if (processAllowed == YES) {
+        NSLog(@"Payment is allowed!");
+        [self.paymentDelegate processPaymentAmount:userInt];
+    } else {
+        
+        NSLog(@"Strange eldritch magicks interfered with %@'s ability to process the payment", [self.paymentDelegate name]);
+    }
 }
 
 @end
