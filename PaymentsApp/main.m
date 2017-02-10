@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "InputHandler.h"
+#import "PaymentGateway.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -16,10 +17,10 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"Thank you for shopping at Acme.com.\nYour total today is $%i.\nPlease select your payment method: 1: Paypal, 2: Stripe, 3: Amazon", randomDollarValue);
         
+        //get user input
         InputHandler *userInput = [[InputHandler alloc] init];
         int userInt = [userInput getUserInput];
-        
-        
+        //Log user choice
         switch (userInt) {
             case 1:
                 NSLog(@"You chose to pay with Paypal!");
@@ -34,6 +35,12 @@ int main(int argc, const char * argv[]) {
                 NSLog(@"Please pick 1, 2, or 3");
                 break;
         }
+        
+        PaymentGateway *payGate = [[PaymentGateway alloc] init];
+        [payGate processPaymentAmount:randomDollarValue];
+        
+        
+        
         
         
         

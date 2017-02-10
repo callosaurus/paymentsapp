@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3FCDDEB51E4E4BCF0073C1D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDDEB41E4E4BCF0073C1D1 /* main.m */; };
 		3FCDDEBD1E4E4D2B0073C1D1 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDDEBC1E4E4D2B0073C1D1 /* InputHandler.m */; };
+		3FCDDEC01E4E51D50073C1D1 /* PaymentGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDDEBF1E4E51D50073C1D1 /* PaymentGateway.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		3FCDDEB41E4E4BCF0073C1D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FCDDEBB1E4E4D2B0073C1D1 /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
 		3FCDDEBC1E4E4D2B0073C1D1 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		3FCDDEBE1E4E51D50073C1D1 /* PaymentGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentGateway.h; sourceTree = "<group>"; };
+		3FCDDEBF1E4E51D50073C1D1 /* PaymentGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentGateway.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				3FCDDEB41E4E4BCF0073C1D1 /* main.m */,
+				3FCDDEBE1E4E51D50073C1D1 /* PaymentGateway.h */,
+				3FCDDEBF1E4E51D50073C1D1 /* PaymentGateway.m */,
 				3FCDDEBB1E4E4D2B0073C1D1 /* InputHandler.h */,
 				3FCDDEBC1E4E4D2B0073C1D1 /* InputHandler.m */,
 			);
@@ -124,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FCDDEC01E4E51D50073C1D1 /* PaymentGateway.m in Sources */,
 				3FCDDEB51E4E4BCF0073C1D1 /* main.m in Sources */,
 				3FCDDEBD1E4E4D2B0073C1D1 /* InputHandler.m in Sources */,
 			);
