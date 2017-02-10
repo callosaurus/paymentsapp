@@ -12,7 +12,7 @@
 
 -(void)processPaymentAmount:(NSInteger)userInt
 {
-    
+    NSLog(@"Stripe processed $%li",(long)userInt);
 }
 
 @end

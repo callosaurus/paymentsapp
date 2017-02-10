@@ -12,7 +12,7 @@
 
 -(void)processPaymentAmount:(NSInteger)userInt
 {
-    
+    NSLog(@"Paypal processed $%li",(long)userInt);
 }
 
 @end

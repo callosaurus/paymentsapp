@@ -12,7 +12,7 @@
 
 -(void)processPaymentAmount:(NSInteger)userInt
 {
-    
+    NSLog(@"Amazon processed $%li",(long)userInt);
 }
 
 @end

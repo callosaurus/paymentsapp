@@ -11,6 +11,8 @@
 
 @interface PaymentGateway : NSObject
 
+@property (nonatomic, weak) id <PaymentDelegate> paymentDelegate;
+
 -(void)processPaymentAmount:(NSInteger)userInt;
 
 @end

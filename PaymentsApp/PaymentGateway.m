@@ -12,7 +12,7 @@
 
 -(void)processPaymentAmount:(NSInteger)userInt
 {
-    NSLog(@"Processed $%li",(long)userInt);
+    [self.paymentDelegate processPaymentAmount:userInt];
 }
 
 @end
