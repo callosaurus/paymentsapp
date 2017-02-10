@@ -13,13 +13,14 @@
 #import "PaypalPaymentService.h"
 #import "StripePaymentService.h"
 #import "AmazonPaymentService.h"
+#import "ApplePayPaymentService.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         int randomDollarValue = arc4random_uniform(901)+100;
         
-        NSLog(@"Thank you for shopping at Acme.com.\nYour total today is $%i.\nPlease select your payment method: 1: Paypal, 2: Stripe, 3: Amazon", randomDollarValue);
+        NSLog(@"Thank you for shopping at Acme.com.\nYour total today is $%i.\nPlease select your payment method: 1: Paypal, 2: Stripe, 3: Amazon, 4: Apple Pay", randomDollarValue);
         
         //get user input
         InputHandler *userInput = [InputHandler new];
@@ -50,8 +51,15 @@ int main(int argc, const char * argv[]) {
                 [payGate processPaymentAmount:randomDollarValue];
                 break;
             }
+            case 4: {
+                NSLog(@"You chose to pay with Apple Pay!");
+                ApplePayPaymentService *payWithApplePay = [ApplePayPaymentService new];
+                payGate.paymentDelegate = payWithApplePay;
+                [payGate processPaymentAmount:randomDollarValue];
+                break;
+            }
             default: {
-                NSLog(@"Please pick 1, 2, or 3");
+                NSLog(@"Please pick 1, 2, 3, or 4");
                 break;
             }
         }
